@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 import 'package:getx/constant.dart';
-import 'package:getx/imagemodel.dart';
+import 'package:getx/models/imagemodel.dart';
 
 class UploadImageContol extends GetxController {
   Future<String> _uploadImagetoStroage(String id, String path) async {

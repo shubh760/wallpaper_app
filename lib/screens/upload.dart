@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:getx/confirm.dart';
+import 'package:getx/controlers/confirm.dart';
 import 'package:image_picker/image_picker.dart';
 
 class Upload extends StatefulWidget {
@@ -60,20 +60,7 @@ class _UploadState extends State<Upload> {
           const SizedBox(
             height: 20,
           ),
-          Center(
-            child: GestureDetector(
-              onTap: () => pickwallpaper(ImageSource.gallery),
-              child: Container(
-                height: MediaQuery.of(context).size.height - 780,
-                width: MediaQuery.of(context).size.width - 250,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32),
-                    gradient: const LinearGradient(
-                        colors: [Colors.red, Colors.blue])),
-                child: const Center(child: Text("Add")),
-              ),
-            ),
-          ),
+         
         ],
       ),
     );

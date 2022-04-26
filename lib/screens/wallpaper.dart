@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
 import 'package:get/get.dart';
-import 'package:getx/imagecontroll.dart';
+import 'package:getx/controlers/imagecontroll.dart';
 
 class Wallpaper extends StatefulWidget {
   final int no;
@@ -29,7 +29,7 @@ class _WallpaperState extends State<Wallpaper> {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
-                        imagecontroll.wapaperList[currentindex].imageurl),
+                        imagecontroll.wallpaperList[currentindex].imageurl),
                     fit: BoxFit.cover)),
             child: BackdropFilter(
               filter: ImageFilter.blur(
@@ -51,11 +51,11 @@ class _WallpaperState extends State<Wallpaper> {
                 currentindex = val;
               });
             },
-            itemCount: imagecontroll.wapaperList.length,
+            itemCount: imagecontroll.wallpaperList.length,
             itemBuilder: (context, index) {
               return FractionallySizedBox(
                 widthFactor: 0.8,
-                child: imagecontroll.wapaperList[currentindex].imageurl.isEmpty
+                child: imagecontroll.wallpaperList[currentindex].imageurl.isEmpty
                     ? const CircularProgressIndicator()
                     : GestureDetector(
                         onLongPress: () {
@@ -71,7 +71,7 @@ class _WallpaperState extends State<Wallpaper> {
                                   onTap: () async {
                                     int location = WallpaperManager.BOTH_SCREEN;
                                     var file =
-                                       await DefaultCacheManager().getSingleFile(imagecontroll.wapaperList[currentindex].imageurl);
+                                       await DefaultCacheManager().getSingleFile(imagecontroll.wallpaperList[currentindex].imageurl);
                                     bool result = await WallpaperManager
                                         .setWallpaperFromFile(file.path, location);
                                   },
@@ -85,7 +85,7 @@ class _WallpaperState extends State<Wallpaper> {
                             borderRadius: BorderRadius.circular(32),
                             image: DecorationImage(
                                 image: NetworkImage(
-                                    imagecontroll.wapaperList[index].imageurl),
+                                    imagecontroll.wallpaperList[index].imageurl),
                                 fit: BoxFit.cover),
                           ),
                         ),

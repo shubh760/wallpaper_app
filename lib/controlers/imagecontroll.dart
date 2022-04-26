@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:getx/constant.dart';
-import 'package:getx/imagemodel.dart';
+import 'package:getx/models/imagemodel.dart';
 
 class Imagecontroll extends GetxController {
   final Rx<List<WallpaperImage>> _wallpaperList = Rx<List<WallpaperImage>>([]);
-  List<WallpaperImage> get wapaperList => _wallpaperList.value;
+  List<WallpaperImage> get wallpaperList => _wallpaperList.value;
 
   @override
   void onInit() {

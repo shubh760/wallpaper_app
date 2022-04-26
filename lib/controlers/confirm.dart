@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/uploadimagecontrol.dart';
+import 'package:getx/controlers/uploadimagecontrol.dart';
 
 
 

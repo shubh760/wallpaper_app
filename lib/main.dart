@@ -1,10 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controler.dart';
-import 'package:getx/signin.dart';
-
-import 'controler.dart';
+import 'package:getx/controlers/controler.dart';
+import 'package:getx/screens/signin.dart';
+import 'controlers/controler.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

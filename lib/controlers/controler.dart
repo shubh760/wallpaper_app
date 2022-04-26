@@ -4,10 +4,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/bottomnav.dart';
+import 'package:getx/screens/bottomnav.dart';
 import 'package:getx/constant.dart';
-import 'package:getx/signin.dart';
-import 'package:getx/model.dart' as model;
+import 'package:getx/screens/signin.dart';
+import 'package:getx/models/model.dart' as model;
 import 'package:image_picker/image_picker.dart';
 
 class Controler extends GetxController {
